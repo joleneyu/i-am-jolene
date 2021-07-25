@@ -18,6 +18,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Theme config
+THEME = 'themes/pelican-alchemy/alchemy'
+
+#Display pages on menu
+DISPLAY_PAGES_ON_MENU = True
+
 # Blogroll
 LINKS = (('Pelican', 'https://getpelican.com/'),
          ('Python.org', 'https://www.python.org/'),
