@@ -25,9 +25,9 @@ THEME = 'themes/pelican-alchemy/alchemy'
 DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+LINKS = (('Home', 'https://google.com/'),
+         ('Our Services', 'https://www.python.org/'),
+         ('About Me', 'https://palletsprojects.com/p/jinja/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
