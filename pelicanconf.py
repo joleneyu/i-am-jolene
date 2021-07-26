@@ -25,16 +25,16 @@ THEME = 'themes/pelican-alchemy/alchemy'
 DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
-LINKS = (('Home', 'https://google.com/'),
+LINKS = (('Home', '/'),
          ('Our Services', 'https://www.python.org/'),
-         ('About Me', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+         ('About Me', 'https://palletsprojects.com/p/jinja/'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
