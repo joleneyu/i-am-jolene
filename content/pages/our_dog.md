@@ -10,4 +10,4 @@ Summary: Short version for index and feeds
 
 BMO is our first dog! She is 1.5 years old. We love her so much!
 
-![Alt Text]({static}/images/bmo.jpg)
+<img alt="This one is just a literal element" src="../images/bmo.jpg" data-action="zoom" width="70%">

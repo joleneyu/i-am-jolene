@@ -51,11 +51,6 @@ hr {
   text-transform: lowercase;
 }
 
-img {
-  object-fit: cover;
-  width: 100%;
-}
-
 .main {
   padding: 1.5rem 0;
 }

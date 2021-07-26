@@ -26,8 +26,7 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
 LINKS = (('Home', '/'),
-         ('Our Services', 'https://www.python.org/'),
-         ('About Me', 'https://palletsprojects.com/p/jinja/'),)
+         ('Our Services', 'https://www.python.org/'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),

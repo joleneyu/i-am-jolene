@@ -86,7 +86,7 @@ def livereload(c):
     from livereload import Server
 
     def cached_build():
-        cmd = '-s {settings_base} -e CACHE_CONTENT=True LOAD_CONTENT_CACHE=True'
+        cmd = '-s {settings_base} -e CACHE_CONTENT=True LOAD_CONTENT_CACHE=False'
         pelican_run(cmd.format(**CONFIG))
 
     cached_build()
