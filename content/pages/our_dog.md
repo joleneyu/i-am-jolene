@@ -3,7 +3,7 @@ Date: 2021-07-25 10:20
 Modified: 2021-07-25 12:55
 Category: Python
 Tags: pelican, publishing
-Slug: my-super-post
+Slug: our-dog
 Authors: Jolene Yu
 Cover: images/bmo.jpg
 Summary: Short version for index and feeds
