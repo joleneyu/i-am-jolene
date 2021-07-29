@@ -20,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      
+    steps:  
+
       # Install pip and pelican
         run: sudo apt update
         run: sudo apt install python3-pip
