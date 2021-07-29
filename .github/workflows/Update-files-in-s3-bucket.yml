@@ -19,10 +19,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2 
-      # Install pip and pelican, then upload files
       - run: |
           sudo apt update
           sudo apt install python3-pip
           pip install pelican
           pip install Markdown
+          cd i-am-jolene/themes
+          git clone git@github.com:joleneyu/pelican-alchemy.git
           make s3_upload
