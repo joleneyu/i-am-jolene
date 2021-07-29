@@ -11,7 +11,7 @@ OUTPUTDIR_S3=$(BASEDIR)/docs_s3
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-S3_BUCKET=i-am-jolene
+S3_BUCKET=i-am-jolene.tinyhop.com.au
 
 GITHUB_PAGES_BRANCH=main
 
@@ -80,8 +80,8 @@ publish:
 publish-s3:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR_S3)" -s "$(PUBLISHCONF)" $(PELICANOPTS) $(PELICANOPTS_S3)
 
-s3_upload: publish
-	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --acl public-read --delete
+s3_upload: publish-s3
+	aws s3 sync "$(OUTPUTDIR_S3)"/ s3://$(S3_BUCKET) --delete
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)"
