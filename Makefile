@@ -87,5 +87,7 @@ github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)"
 	git push origin $(GITHUB_PAGES_BRANCH)
 
+love:
+	echo i love edify42
 
 .PHONY: html help clean regenerate serve serve-global devserver publish s3_upload github
