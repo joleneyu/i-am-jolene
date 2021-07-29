@@ -1,10 +1,13 @@
 PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
+PELICANOPTS_S3='-e SITEURL=https://i-am-jolene.tinyhop.com.au'
+
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/docs
+OUTPUTDIR_S3=$(BASEDIR)/docs_s3
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
@@ -73,6 +76,9 @@ devserver-global:
 
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
+
+publish-s3:
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR_S3)" -s "$(PUBLISHCONF)" $(PELICANOPTS) $(PELICANOPTS_S3)
 
 s3_upload: publish
 	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --acl public-read --delete
