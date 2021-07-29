@@ -20,14 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      
+
     steps:  
 
-      # Install pip and pelican
+      # Install pip and pelican, then upload files
         run: sudo apt update
         run: sudo apt install python3-pip
         run: pip install pelican
-
-      # Upload s3 files
       - name: Run make S3_upload
         run: make s3_upload
