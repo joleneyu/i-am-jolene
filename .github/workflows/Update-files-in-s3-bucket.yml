@@ -24,6 +24,10 @@ jobs:
           sudo apt install python3-pip
           pip install pelican
           pip install Markdown
-          cd i-am-jolene/themes
+          mkdir i-am-jolene
+          cd i-am-jolene
+          git clone git@github.com:joleneyu/i-am-jolene.git  
+          cd themes
           git clone git@github.com:joleneyu/pelican-alchemy.git
+          cd ..
           make s3_upload
