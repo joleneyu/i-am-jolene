@@ -27,5 +27,5 @@ jobs:
         run: sudo apt update
         run: sudo apt install python3-pip
         run: pip install pelican
-      - name: Run make S3_upload
+        run: pip install Markdown
         run: make s3_upload
