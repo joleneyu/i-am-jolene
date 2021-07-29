@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Update files in s3 bucket
 
 # Controls when the workflow will run
@@ -16,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  update_s3_html_files:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -27,10 +25,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run make S3_upload
-        run: echo Hello, world!
+        run: make s3_upload
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
