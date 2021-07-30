@@ -27,6 +27,7 @@ jobs:
           mkdir i-am-jolene
           cd i-am-jolene
           git clone https://github.com/joleneyu/i-am-jolene.git
+          echo "Hello word"
           cd themes
           git clone https://github.com/joleneyu/pelican-alchemy.git
           cd ..
