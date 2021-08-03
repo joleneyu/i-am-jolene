@@ -25,8 +25,8 @@ THEME = 'themes/pelican-alchemy/alchemy'
 DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
-LINKS = (('Home', '/'),
-         ('Our Services', 'https://www.python.org/'),)
+# LINKS = (('Home', '/'),
+#          ('Our Services', 'https://www.python.org/'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
