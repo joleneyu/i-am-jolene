@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Side Project - Build Personal Blog I | I am Jolene
+</title>
+  <link rel="canonical" href="https://joleneyu.github.io/i-am-jolene/side-project-1.html">
+
+
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://joleneyu.github.io/i-am-jolene/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://joleneyu.github.io/i-am-jolene/feeds/build-up-your-own-blog.atom.xml">  
+  <meta name="description" content="The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine. Pelican is powered by python and requires no database or server-side logic …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="title"><a href="https://joleneyu.github.io/i-am-jolene/">I am Jolene</a></h1>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/resume.html">Resume</a></li>
+            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/about-me.html">About me</a></li>
+            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/our-dog.html">Our dog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Side Project - Build Personal Blog I
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2021-07-26T14:04:00+10:00">
+          <i class="fas fa-clock"></i>
+          Mon 26 July 2021
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://joleneyu.github.io/i-am-jolene/category/build-up-your-own-blog.html">Build up your own blog</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-user"></i>
+              <a href="https://joleneyu.github.io/i-am-jolene/author/jolene-yu.html">Jolene Yu</a>          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://joleneyu.github.io/i-am-jolene/tag/pelican.html">#pelican</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/python.html">#python</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/git.html">#git</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine.</p>
+<p>Pelican is powered by python and requires no database or server-side logic which is easier for beginners.</p>
+<h3>Before start:</h3>
+<ol>
+<li>Get python, pip3, git installed  </li>
+<li>Choose a Pelican theme you like (here is the one I used https://github.com/nairobilug/pelican-alchemy)  </li>
+<li>Create a new repository at GitHub or any other git repository management for this project. (Strongly recommend to use GitHub, because this tutorial has further setups for GitHub Pages and GitHub Actions) </li>
+</ol>
+<h3>When you are ready with these prerequisites, let's jump to how to kickstart a website.</h3>
+<ol>
+<li>
+<p>Install pelican  </p>
+<blockquote>
+<p>$ pip install pelican</p>
+</blockquote>
+</li>
+<li>
+<p>Install Markdown if you plan on using Markdown as a markup format</p>
+<blockquote>
+<p>$ pip install Markdown</p>
+</blockquote>
+</li>
+<li>
+<p>Create a directory to house the site content and configuration files, which can be located any place you prefer</p>
+<blockquote>
+<p>$ mkdir ~/Desktop/yoursitename<br>
+$ cd ~/Desktop/yoursitename</p>
+</blockquote>
+</li>
+<li>
+<p>Run the pelican-quickstart command, which will ask some questions about your site (Those settings can be changed anytime after in the configuration file, so don't worry too much here!)</p>
+<blockquote>
+<p>$ pelican-quickstart</p>
+</blockquote>
+</li>
+<li>
+<p>Follow the theme installtion instruction, which is avaiable in the GitHub repository README.md, and add the theme folder as a submodule</p>
+<blockquote>
+<p>$ mkdir themes<br>
+$ git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican-alchemy</p>
+</blockquote>
+</li>
+<li>
+<p>Now you are ready to generate and serve your site locally at http://localhost:8000</p>
+<blockquote>
+<p>$ make devserver  </p>
+</blockquote>
+</li>
+</ol>
+<p>After this tutorial, you should see a locally served template site like this! Don't worry if your site is missing some images or menu settings, we can figure those things out later!  </p>
+<p>Don't forget to use git to snyc your local repository with remote one. You can always fall back to the old version if you messed up some settings later.   </p>
+<p><img alt="This one is just a literal element" src="https://joleneyu.github.io/i-am-jolene/images/default.png" data-action="zoom" width="100%"></p>
+<h3>Lesson-Learned Time:</h3>
+<ol>
+<li>
+<p>The tutorial looks quite straight-forward, but sometimes when I don't understand something 100%, I choose to look for more information on google which is time-consuming. I advise just to try it out. Hit a command and see what terminal says.</p>
+</li>
+<li>
+<p>When you are not sure about some setting, make smaller changes instead of multiple changes at same time. Make steps smaller, make identify problems quicker.</p>
+</li>
+<li>
+<p>Use .gitignore wisely. I'm using VS code as my code editor, and it showed I have some uncommit/unstaged changes even if I didn't change anything. I found out .DS_Store was the problem. It's safe to untrack this file. I saved a lot of effort for context switching after I put it to .gitignore.</p>
+</li>
+<li>
+<p>Submoudle is another repository from the site repository, it needs to sync seperately.</p>
+</li>
+</ol>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
