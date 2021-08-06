@@ -26,7 +26,9 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
 # LINKS = (('Home', '/'),
-#          ('Our Services', 'https://www.python.org/'),)
+#          ('Our Services', 'https://www.python.org/'),
+#          ('LinkedIn', 'https://www.linkedin.com/in/jolene-yu/'),
+#          ('GitHub', 'https://github.com/joleneyu'))
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),

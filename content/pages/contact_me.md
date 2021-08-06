@@ -7,8 +7,8 @@ Slug: contact-me
 Authors: Jolene Yu
 Summary: LinkedIn and GitHub
 
-[LinkedIn](www.linkedin.com/in/jolene-yu)
+<a href="https://www.linkedin.com/in/jolene-yu" target="_blank">LinkedIn</a>
 
-[GitHub](https://github.com/joleneyu)
+<a href="https://github.com/joleneyu" target="_blank">GitHub</a>
 
 
