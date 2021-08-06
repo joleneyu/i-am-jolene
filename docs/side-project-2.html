@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Build Up Your Own Blog - Step by Step (2) | I am Jolene
+</title>
+  <link rel="canonical" href="https://joleneyu.github.io/i-am-jolene/side-project-2.html">
+
+
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://joleneyu.github.io/i-am-jolene/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://joleneyu.github.io/i-am-jolene/feeds/side-project.atom.xml">  
+  <meta name="description" content="Continue from the first step, this one will show some custom settings on your website, which includes add new pages with images, menu modification. Let's go: Add a new page - Open your terminal, create a directory "pages" under "content", and creat a Markdown file yourpage.md. $ cd ~/Desktop/yoursitename/content …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="title"><a href="https://joleneyu.github.io/i-am-jolene/">I am Jolene</a></h1>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/resume.html">Resume</a></li>
+            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/about-me.html">About me</a></li>
+            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/our-dog.html">Our dog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Build Up Your Own Blog - Step by Step (2)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2021-07-26T14:04:00+10:00">
+          <i class="fas fa-clock"></i>
+          Mon 26 July 2021
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://joleneyu.github.io/i-am-jolene/category/side-project.html">side project</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-user"></i>
+              <a href="https://joleneyu.github.io/i-am-jolene/author/jolene-yu.html">Jolene Yu</a>          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://joleneyu.github.io/i-am-jolene/tag/pelican.html">#pelican</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/html.html">#html</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Continue from the first step, this one will show some custom settings on your website, which includes add new pages with images, menu modification.</p>
+<h3>Let's go:</h3>
+<p><strong>Add a new page</strong> - Open your terminal, create a directory "pages" under "content", and creat a Markdown file yourpage.md.  </p>
+<div class="highlight"><pre><span></span><code>$ cd ~/Desktop/yoursitename/content  
+$ mkdir pages  
+$ touch pages/yourpage.md  
+</code></pre></div>
+
+<p><strong>Edit the new page</strong> - Open your code editor, and modify the page as you like. Metadata syntax for Markdown posts should follow the  pattern below. More metadata decription can be found at <a href="https://docs.getpelican.com/en/latest/content.html#articles-and-pages">here</a>  </p>
+<div class="highlight"><pre><span></span><code>Title: About me  
+Date: 2021-07-26 14:04  
+Modified: 2021-07-26 15:05  
+Category: About  
+Tags: pages  
+Slug: about-me  
+Authors: Jolene Yu  
+Summary: Information about me  
+
+This is the page of my super blog post.  
+</code></pre></div>
+
+<p><strong>Add a cover to your page</strong> - Create a directory "images" under "content", and put the image you are happy to use in that directory. You can add a line to yourpage.md, starting with an exclamation mark (!), followed by alt text in brackets, and the path or URL to the image asset in parentheses. You can optionally add a title after the URL in the parentheses.  </p>
+<div class="highlight"><pre><span></span><code>![image info](./images/name.jpg &quot;title&quot;)
+</code></pre></div>
+
+<p>But the image won't automately <strong>zoom in &amp; out</strong> when the page of window is changing. Luckily, you could just use some HTML in your Markdown, so I add the line of below to yourpage.md.   </p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;image info&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./images/name.jpg&quot;</span> <span class="na">data-action</span><span class="o">=</span><span class="s">&quot;zoom&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;70%&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Or you could use a custom CSS file to do the same, but it involves setting modification in "themes" directory which I try to aviod. You could explore more at <a href="https://stackoverflow.com/questions/255170/markdown-and-image-alignment#answer-5054055">here</a>  </p>
+<p><strong>Clean the menu links</strong> - Use VS code gloabl searching with short cut "cmd+shift+f" to locate the menu links setting and I found it's in LINKS section of pelicanconf.py, you can modify the links where to redirect or simply remove them. I commented them out since I might use them later on.  </p>
+<p><img alt="image info" src="./images/links.png" data-action="zoom" width="50%"></p>
+<h3>Lesson-Learned Time:</h3>
+<ol>
+<li>
+<p>I haven't used markdown, html or either css before. It took me a while to figure out how markdown works. Follow the official instruction frist, and if it's not working, break down the error and locate the real issue.</p>
+</li>
+<li>
+<p>Pages or Articles are edited in the similar way. I created my blogs in a seperated directory "/content/articles". Here is a Markdown format documentation for you to read if you need to modify pages or articles later: <a href="https://www.markdownguide.org/basic-syntax/">Markdown</a></p>
+</li>
+</ol>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
