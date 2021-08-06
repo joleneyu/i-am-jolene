@@ -7,14 +7,14 @@ Slug: side-project-1
 Authors: Jolene Yu
 
 
-The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine.
+The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine. Here is the repo for this project [here](https://github.com/joleneyu/i-am-jolene)
 
 Pelican is powered by python and requires no database or server-side logic which is easier for beginners.
 
 ### Before start:
 
 1. Get python, pip3, git installed  
-2. Choose a Pelican theme you like (here is the one I used [here](https://github.com/nairobilug/pelican-alchemy)  
+2. Choose a Pelican theme you like (here is the one I used [here](https://github.com/nairobilug/pelican-alchemy))  
 3. Create a new repository at GitHub or any other git repository management for this project. (Strongly recommend to use GitHub, because this tutorial has further setups for GitHub Pages and GitHub Actions) 
 
 ### When you are ready with these prerequisites, let's jump to how to kickstart a website.

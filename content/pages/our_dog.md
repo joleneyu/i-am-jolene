@@ -1,13 +1,14 @@
-Title: Our dog
+Title: Contact me
 Date: 2021-07-25 10:20
 Modified: 2021-07-25 12:55
-Category: Python
-Tags: pelican, publishing
-Slug: our-dog
+Category: Contact
+Tags: Personal
+Slug: contact-me
 Authors: Jolene Yu
-Cover: images/bmo.jpg
-Summary: Short version for index and feeds
+Summary: LinkedIn and GitHub
 
-BMO is our first dog! She is 1.5 years old. We love her so much!
+[LinkedIn](www.linkedin.com/in/jolene-yu)
 
-<img alt="This one is just a literal element" src="../images/bmo.jpg" data-action="zoom" width="70%">
+[GitHub](https://github.com/joleneyu)
+
+
