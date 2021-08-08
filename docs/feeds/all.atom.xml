@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>I am Jolene</title><link href="https://joleneyu.github.io/i-am-jolene/" rel="alternate"></link><link href="https://joleneyu.github.io/i-am-jolene/feeds/all.atom.xml" rel="self"></link><id>https://joleneyu.github.io/i-am-jolene/</id><updated>2021-08-04T17:05:00+10:00</updated><entry><title>Build Up Your Own Blog - Step by Step (2)</title><link href="https://joleneyu.github.io/i-am-jolene/side-project-2.html" rel="alternate"></link><published>2021-07-26T14:04:00+10:00</published><updated>2021-08-04T17:05:00+10:00</updated><author><name>Jolene Yu</name></author><id>tag:joleneyu.github.io,2021-07-26:/i-am-jolene/side-project-2.html</id><summary type="html">&lt;p&gt;Continue from the first step, this one will show some custom settings on your website, which includes add new pages with images, menu modification.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>I am Jolene</title><link href="https://joleneyu.github.io/i-am-jolene/" rel="alternate"></link><link href="https://joleneyu.github.io/i-am-jolene/feeds/all.atom.xml" rel="self"></link><id>https://joleneyu.github.io/i-am-jolene/</id><updated>2021-08-04T17:05:00+10:00</updated><entry><title>Build Up Your Own Blog - Step by Step (2)</title><link href="https://joleneyu.github.io/i-am-jolene/side-project-2.html" rel="alternate"></link><published>2021-07-26T14:04:00+10:00</published><updated>2021-08-04T17:05:00+10:00</updated><author><name>Jolene Yu</name></author><id>tag:joleneyu.github.io,2021-07-26:/i-am-jolene/side-project-2.html</id><summary type="html">&lt;p&gt;Continue from the first step, this one will show some custom settings on your website, which includes adding new pages with images, and menu modification.&lt;/p&gt;
 &lt;h3&gt;Let's go:&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Add a new page&lt;/strong&gt; - Open your terminal, create a directory "pages" under "content", and creat a Markdown file yourpage.md.  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ cd ~/Desktop/yoursitename/content …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Continue from the first step, this one will show some custom settings on your website, which includes add new pages with images, menu modification.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Add a new page&lt;/strong&gt; - Open your terminal, create a directory "pages" under "content", and create a Markdown file yourpage.md.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ cd ~/Desktop/yoursitename …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Continue from the first step, this one will show some custom settings on your website, which includes adding new pages with images, and menu modification.&lt;/p&gt;
 &lt;h3&gt;Let's go:&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Add a new page&lt;/strong&gt; - Open your terminal, create a directory "pages" under "content", and creat a Markdown file yourpage.md.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Add a new page&lt;/strong&gt; - Open your terminal, create a directory "pages" under "content", and create a Markdown file yourpage.md.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ cd ~/Desktop/yoursitename/content  
 $ mkdir pages  
 $ touch pages/yourpage.md  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Edit the new page&lt;/strong&gt; - Open your code editor, and modify the page as you like. Metadata syntax for Markdown posts should follow the  pattern below. More metadata decription can be found at &lt;a href="https://docs.getpelican.com/en/latest/content.html#articles-and-pages"&gt;here&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit the new page&lt;/strong&gt; - Open your code editor, and modify the page as you like. Metadata syntax for Markdown posts should follow the  pattern below. More metadata description can be found &lt;a href="https://docs.getpelican.com/en/latest/content.html#articles-and-pages"&gt;here&lt;/a&gt;  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Title: About me  
 Date: 2021-07-26 14:04  
 Modified: 2021-07-26 15:05  
@@ -27,37 +27,37 @@ This is the page of my super blog post.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;![image info](./images/name.jpg &amp;quot;title&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;But the image won't automately &lt;strong&gt;zoom in &amp;amp; out&lt;/strong&gt; when the page of window is changing. Luckily, you could just use some HTML in your Markdown, so I add the line of below to yourpage.md.   &lt;/p&gt;
+&lt;p&gt;But the image won't automatically &lt;strong&gt;zoom in &amp;amp; out&lt;/strong&gt; when the page size changes. Luckily, you could just use some HTML in your Markdown, so I add the line below.   &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image info&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;./images/name.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-action&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;zoom&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;70%&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Or you could use a custom CSS file to do the same, but it involves setting modification in "themes" directory which I try to aviod. You could explore more at &lt;a href="https://stackoverflow.com/questions/255170/markdown-and-image-alignment#answer-5054055"&gt;here&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Clean the menu links&lt;/strong&gt; - Use VS code gloabl searching with short cut "cmd+shift+f" to locate the menu links setting and I found it's in LINKS section of pelicanconf.py, you can modify the links where to redirect or simply remove them. I commented them out since I might use them later on.  &lt;/p&gt;
+&lt;p&gt;Or you could use a custom CSS file to do the same, but it involves making modification to the "themes" directory which I try to aviod. You could explore more &lt;a href="https://stackoverflow.com/questions/255170/markdown-and-image-alignment#answer-5054055"&gt;here&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Clean the menu links&lt;/strong&gt; - Use VS code global search with the short cut "cmd+shift+f" to locate the menu links setting. It's in the LINKS section of pelicanconf.py, you can modify the links where to redirect or simply remove them. I commented them out since I might use them later on.  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="image info" src="./images/links.png" data-action="zoom" width="50%"&gt;&lt;/p&gt;
-&lt;h3&gt;Lesson-Learned Time:&lt;/h3&gt;
+&lt;h3&gt;Lessons-Learned:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;I haven't used markdown, html or either css before. It took me a while to figure out how markdown works. Follow the official instruction frist, and if it's not working, break down the error and locate the real issue.&lt;/p&gt;
+&lt;p&gt;I haven't used markdown, html or css before. It took me a while to figure out how markdown works. Follow the official instruction first, and if it's not working, break down the error and locate the real issue.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Pages or Articles are edited in the similar way. I created my blogs in a seperated directory "/content/articles". Here is a Markdown format documentation for you to read if you need to modify pages or articles later: &lt;a href="https://www.markdownguide.org/basic-syntax/"&gt;Markdown&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pages or Articles are edited in a similar way. I created my blogs in a seperate directory "/content/articles". Here is a Markdown format documentation for you to read if you need to modify pages or articles later: &lt;a href="https://www.markdownguide.org/basic-syntax/"&gt;Markdown&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="side project"></category><category term="pelican"></category><category term="html"></category></entry><entry><title>Build Up Your Own Blog - Step by Step (1)</title><link href="https://joleneyu.github.io/i-am-jolene/side-project-1.html" rel="alternate"></link><published>2021-07-25T14:04:00+10:00</published><updated>2021-08-04T17:05:00+10:00</updated><author><name>Jolene Yu</name></author><id>tag:joleneyu.github.io,2021-07-25:/i-am-jolene/side-project-1.html</id><summary type="html">&lt;p&gt;The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine. Here is the repo for this project &lt;a href="https://github.com/joleneyu/i-am-jolene"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Pelican is powered by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine. Here is the repo for this project &lt;a href="https://github.com/joleneyu/i-am-jolene"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><category term="side project"></category><category term="pelican"></category><category term="html"></category></entry><entry><title>Build Up Your Own Blog - Step by Step (1)</title><link href="https://joleneyu.github.io/i-am-jolene/side-project-1.html" rel="alternate"></link><published>2021-07-25T14:04:00+10:00</published><updated>2021-08-04T17:05:00+10:00</updated><author><name>Jolene Yu</name></author><id>tag:joleneyu.github.io,2021-07-25:/i-am-jolene/side-project-1.html</id><summary type="html">&lt;p&gt;The website you are browsing is my first side project which leveraged a static site generator - Pelican. This blog is about  steps on how to install Pelican and some lesson-learned while I was building up mine site. &lt;a href="https://github.com/joleneyu/i-am-jolene"&gt;Here is the repo for this project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pelican is powered by python and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The website you are browsing is my first side project which leveraged a static site generator - Pelican. This blog is about  steps on how to install Pelican and some lesson-learned while I was building up mine site. &lt;a href="https://github.com/joleneyu/i-am-jolene"&gt;Here is the repo for this project&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Pelican is powered by python and requires no database or server-side logic which is easier for beginners.&lt;/p&gt;
-&lt;h3&gt;Before start:&lt;/h3&gt;
+&lt;h3&gt;Before you start:&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Get python, pip3, git installed  &lt;/li&gt;
-&lt;li&gt;Choose a Pelican theme you like (here is the one I used &lt;a href="https://github.com/nairobilug/pelican-alchemy"&gt;here&lt;/a&gt;)  &lt;/li&gt;
-&lt;li&gt;Create a new repository at GitHub or any other git repository management for this project. (Strongly recommend to use GitHub, because this tutorial has further setups for GitHub Pages and GitHub Actions) &lt;/li&gt;
+&lt;li&gt;Have python, pip3, and git installed  &lt;/li&gt;
+&lt;li&gt;Choose a Pelican theme you like (&lt;a href="https://github.com/nairobilug/pelican-alchemy"&gt;here is the one I used&lt;/a&gt;)  &lt;/li&gt;
+&lt;li&gt;Create a new repository at GitHub or any other git repository management for this project. (Strongly recommend to use GitHub, because this tutorial has further steps for GitHub Pages and GitHub Actions) &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;When you are ready with these prerequisites, let's jump to how to kickstart a website.&lt;/h3&gt;
+&lt;h3&gt;When you are ready with the prerequisites, let's jump to how to kickstart a website.&lt;/h3&gt;
 &lt;p&gt;Install pelican  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ pip install pelican
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ pip3 install pelican
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Install Markdown if you plan on using Markdown as a markup format&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ pip install Markdown
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ pip3 install Markdown
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Create a directory to house the site content and configuration files, which can be located any place you prefer&lt;/p&gt;
@@ -74,25 +74,25 @@ $ cd ~/Desktop/yoursitename
 $ git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican-alchemy
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Now you are ready to generate and serve your site locally at http://localhost:8000&lt;/p&gt;
+&lt;p&gt;Now you are ready to generate and serve your site locally at &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ make devserver  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;After this tutorial, you should see a locally served template site like this! Don't worry if your site is missing some images or menu settings, we can figure those things out later!  &lt;/p&gt;
-&lt;p&gt;Don't forget to use git to snyc your local repository with remote one. You can always fall back to the old version if you messed up some settings later.   &lt;/p&gt;
+&lt;p&gt;Don't forget to use git to sync your local repository with the remote one. You can always find the old version if you messed up some settings later.   &lt;/p&gt;
 &lt;p&gt;&lt;img alt="This one is just a literal element" src="https://joleneyu.github.io/i-am-jolene/images/default.png" data-action="zoom" width="100%"&gt;&lt;/p&gt;
-&lt;h3&gt;Lesson-Learned Time:&lt;/h3&gt;
+&lt;h3&gt;Lessons-Learned:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;The tutorial looks quite straight-forward, sometimes when I don't understand something 100%, I choose to look for more information on google which is time-consuming. I advise to try it out first. Hit a command and see what terminal says.&lt;/p&gt;
+&lt;p&gt;The tutorial looks quite straight-forward, sometimes when I don't understand something 100%, I look for more information on google which is time-consuming. I advise trying it out first. Hit a command and see what the terminal says.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;When you are not sure about some settings, make smaller changes instead of multiple changes at same time. Make steps smaller, make identify problems quicker.&lt;/p&gt;
+&lt;p&gt;When you are not sure about some settings, make smaller changes instead of multiple changes at the same time. Make small changes, this makes identifying problems quicker.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Use .gitignore wisely. I'm using VS code as my code editor, and it showed I have some uncommit/unstaged changes even if I didn't change anything. I found out .DS_Store was the problem, and it's safe to untrack this file. I saved a lot of effort for context switching after I put it to .gitignore.&lt;/p&gt;
+&lt;p&gt;Use .gitignore wisely. I'm using VS code as my code editor, and it shows when I have some uncommit/unstaged changes even if I didn't change anything. I found out .DS_Store was the problem, and it's safe to untrack this file. I saved a lot of effort for context switching after I put it to .gitignore.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Submoudle is another repository from the site repository, it needs to sync seperately.&lt;/p&gt;
+&lt;p&gt;Submodule is another repository from the site repository, it needs to sync seperately.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</content><category term="side project"></category><category term="pelican"></category><category term="python"></category><category term="git"></category></entry></feed>
