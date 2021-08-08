@@ -8,7 +8,7 @@ Authors: Jolene Yu
 Cover: images/jo.jpg
 Summary: Information about me
 
-<img alt="This one is just a literal element" src="{static}/images/jo.jpg" style="float:right;margin:30px 10px 10px 30px" data-action="zoom" width="50%">
+<img alt="This one is just a literal element" src="../images/jo.jpg" style="float:right;margin:30px 10px 10px 30px" data-action="zoom" width="50%">
 
 
 <br/>
