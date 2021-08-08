@@ -8,6 +8,15 @@ Authors: Jolene Yu
 Summary: Short version for index and feeds
 status: 
 
+### ***External Projects***
+
+> *Jul 2021 - Aug 2021*
+> #### Build Up Personal Website
+>
+> * Created, tested a personal website with Pelican static site generator, created content pages and articles to the website with Markdown, HTML, used Git to do version control.
+> * Leveraged GitHub Pages to serve the website publicly at https://joleneyu.github.io/i-am-jolene/ 
+> * Used Terraform to create, test AWS S3, AWS Cloudfront infra to serve the website through https://i-am-jolene.tinyhop.com.au/, created GitHub Actions workflow to automatically upload & update this website
+> * Creating EC2 instances, Classic Load Balancer infra with Terraform and writing bash script to bootstrap the instances and serve the website.  
 
 ### ***Work Experience***
 

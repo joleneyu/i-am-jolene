@@ -8,19 +8,16 @@
 
   <title>  Build Up Your Own Blog - Step by Step (1) | I am Jolene
 </title>
-  <link rel="canonical" href="https://joleneyu.github.io/i-am-jolene/side-project-1.html">
+  <link rel="canonical" href="/side-project-1.html">
 
 
-  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/fontawesome.min.css">
-  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/pygments/default.min.css">
-  <link rel="stylesheet" href="https://joleneyu.github.io/i-am-jolene/theme/css/theme.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
 
-  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
-        href="https://joleneyu.github.io/i-am-jolene/feeds/all.atom.xml">
-  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
-        href="https://joleneyu.github.io/i-am-jolene/feeds/side-project.atom.xml">  
-  <meta name="description" content="The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine. Here is the repo for this project here Pelican is powered by …">
+  
+  <meta name="description" content="The website you are browsing is my first side project which leveraged a static site generator - Pelican. This blog is about steps on how to install Pelican and some lesson-learned while I was building up mine site. Here is the repo for this project Pelican is powered by python and …">
 
 
 </head>
@@ -30,11 +27,11 @@
     <div class="container">
 <div class="row">
   <div class="col-sm-12">
-    <h1 class="title"><a href="https://joleneyu.github.io/i-am-jolene/">I am Jolene</a></h1>
+    <h1 class="title"><a href="/">I am Jolene</a></h1>
       <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/resume.html">Resume</a></li>
-            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/about-me.html">About me</a></li>
-            <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/pages/contact-me.html">Contact me</a></li>
+            <li class="list-inline-item"><a href="/pages/resume.html">Resume</a></li>
+            <li class="list-inline-item"><a href="/pages/about-me.html">About me</a></li>
+            <li class="list-inline-item"><a href="/pages/contact-me.html">Contact me</a></li>
       </ul>
   </div>
 </div>    </div>
@@ -54,32 +51,32 @@
         </li>
         <li class="list-inline-item">
           <i class="fas fa-folder-open"></i>
-          <a href="https://joleneyu.github.io/i-am-jolene/category/side-project.html">side project</a>
+          <a href="/category/side-project.html">side project</a>
         </li>
           <li class="list-inline-item">
             <i class="fas fa-user"></i>
-              <a href="https://joleneyu.github.io/i-am-jolene/author/jolene-yu.html">Jolene Yu</a>          </li>
+              <a href="/author/jolene-yu.html">Jolene Yu</a>          </li>
           <li class="list-inline-item">
             <i class="fas fa-tag"></i>
-              <a href="https://joleneyu.github.io/i-am-jolene/tag/pelican.html">#pelican</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/python.html">#python</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/git.html">#git</a>          </li>
+              <a href="/tag/pelican.html">#pelican</a>,               <a href="/tag/python.html">#python</a>,               <a href="/tag/git.html">#git</a>          </li>
       </ul>
     </header>
     <div class="content">
-      <p>The website you are browsing at is my first side project which leveraged with static site generator - Pelican. This blog is about initial steps of how to install Pelican and some lesson-learned while I was building up mine. Here is the repo for this project <a href="https://github.com/joleneyu/i-am-jolene">here</a></p>
+      <p>The website you are browsing is my first side project which leveraged a static site generator - Pelican. This blog is about  steps on how to install Pelican and some lesson-learned while I was building up mine site. <a href="https://github.com/joleneyu/i-am-jolene">Here is the repo for this project</a></p>
 <p>Pelican is powered by python and requires no database or server-side logic which is easier for beginners.</p>
-<h3>Before start:</h3>
+<h3>Before you start:</h3>
 <ol>
-<li>Get python, pip3, git installed  </li>
-<li>Choose a Pelican theme you like (here is the one I used <a href="https://github.com/nairobilug/pelican-alchemy">here</a>)  </li>
-<li>Create a new repository at GitHub or any other git repository management for this project. (Strongly recommend to use GitHub, because this tutorial has further setups for GitHub Pages and GitHub Actions) </li>
+<li>Have python, pip3, and git installed  </li>
+<li>Choose a Pelican theme you like (<a href="https://github.com/nairobilug/pelican-alchemy">here is the one I used</a>)  </li>
+<li>Create a new repository at GitHub or any other git repository management for this project. (Strongly recommend to use GitHub, because this tutorial has further steps for GitHub Pages and GitHub Actions) </li>
 </ol>
-<h3>When you are ready with these prerequisites, let's jump to how to kickstart a website.</h3>
+<h3>When you are ready with the prerequisites, let's jump to how to kickstart a website.</h3>
 <p>Install pelican  </p>
-<div class="highlight"><pre><span></span><code>$ pip install pelican
+<div class="highlight"><pre><span></span><code>$ pip3 install pelican
 </code></pre></div>
 
 <p>Install Markdown if you plan on using Markdown as a markup format</p>
-<div class="highlight"><pre><span></span><code>$ pip install Markdown
+<div class="highlight"><pre><span></span><code>$ pip3 install Markdown
 </code></pre></div>
 
 <p>Create a directory to house the site content and configuration files, which can be located any place you prefer</p>
@@ -96,26 +93,26 @@ $ cd ~/Desktop/yoursitename
 $ git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican-alchemy
 </code></pre></div>
 
-<p>Now you are ready to generate and serve your site locally at http://localhost:8000</p>
+<p>Now you are ready to generate and serve your site locally at <a href="http://localhost:8000">http://localhost:8000</a></p>
 <div class="highlight"><pre><span></span><code>$ make devserver  
 </code></pre></div>
 
 <p>After this tutorial, you should see a locally served template site like this! Don't worry if your site is missing some images or menu settings, we can figure those things out later!  </p>
-<p>Don't forget to use git to snyc your local repository with remote one. You can always fall back to the old version if you messed up some settings later.   </p>
-<p><img alt="This one is just a literal element" src="https://joleneyu.github.io/i-am-jolene/images/default.png" data-action="zoom" width="100%"></p>
-<h3>Lesson-Learned Time:</h3>
+<p>Don't forget to use git to sync your local repository with the remote one. You can always find the old version if you messed up some settings later.   </p>
+<p><img alt="This one is just a literal element" src="/images/default.png" data-action="zoom" width="100%"></p>
+<h3>Lessons-Learned:</h3>
 <ol>
 <li>
-<p>The tutorial looks quite straight-forward, sometimes when I don't understand something 100%, I choose to look for more information on google which is time-consuming. I advise to try it out first. Hit a command and see what terminal says.</p>
+<p>The tutorial looks quite straight-forward, sometimes when I don't understand something 100%, I look for more information on google which is time-consuming. I advise trying it out first. Hit a command and see what the terminal says.</p>
 </li>
 <li>
-<p>When you are not sure about some settings, make smaller changes instead of multiple changes at same time. Make steps smaller, make identify problems quicker.</p>
+<p>When you are not sure about some settings, make smaller changes instead of multiple changes at the same time. Make small changes, this makes identifying problems quicker.</p>
 </li>
 <li>
-<p>Use .gitignore wisely. I'm using VS code as my code editor, and it showed I have some uncommit/unstaged changes even if I didn't change anything. I found out .DS_Store was the problem, and it's safe to untrack this file. I saved a lot of effort for context switching after I put it to .gitignore.</p>
+<p>Use .gitignore wisely. I'm using VS code as my code editor, and it shows when I have some uncommit/unstaged changes even if I didn't change anything. I found out .DS_Store was the problem, and it's safe to untrack this file. I saved a lot of effort for context switching after I put it to .gitignore.</p>
 </li>
 <li>
-<p>Submoudle is another repository from the site repository, it needs to sync seperately.</p>
+<p>Submodule is another repository from the site repository, it needs to sync seperately.</p>
 </li>
 </ol>
     </div>
@@ -127,10 +124,10 @@ $ git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican
     <div class="container">
 <div class="row">
   <ul class="col-sm-6 list-inline">
-      <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/authors.html">Authors</a></li>
-    <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/archives.html">Archives</a></li>
-    <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/categories.html">Categories</a></li>
-      <li class="list-inline-item"><a href="https://joleneyu.github.io/i-am-jolene/tags.html">Tags</a></li>
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
   </ul>
   <p class="col-sm-6 text-sm-right text-muted">
     Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
