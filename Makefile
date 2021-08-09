@@ -2,7 +2,7 @@ PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
 PELICANOPTS_S3='-e SITEURL=https://i-am-jolene.tinyhop.com.au'
-
+PELICANOPTS_ELB='-e RELATIVE_URLS=True'
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -76,6 +76,9 @@ devserver-global:
 
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
+
+publish-elb:
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS) $(PELICANOPTS_ELB)
 
 publish-s3:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR_S3)" -s "$(PUBLISHCONF)" $(PELICANOPTS) $(PELICANOPTS_S3)
