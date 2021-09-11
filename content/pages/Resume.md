@@ -6,7 +6,7 @@ Tags: pelican, publishing
 Slug: resume
 Authors: Jolene Yu
 Summary: Short version for index and feeds
-status: 
+status: hidden
 
 ### ***External Projects***
 
