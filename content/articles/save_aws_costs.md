@@ -1,9 +1,9 @@
 Title: Save Your AWS Costs by StackJanitor
 Date: 2021-09-11 14:04
 Modified: 2021-09-11 17:05
-Category: side project
+Category: open source
 Tags: serverless, typescript, unit test  
-Slug: side-project-3
+Slug: open-source-1
 Authors: Jolene Yu
 
 

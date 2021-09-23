@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>  Save Your AWS Costs by StackJanitor | I am Jolene
+  <title>  Why I Hate Jenkins and Tips If You Have to Use It! | I am Jolene
 </title>
   <link rel="canonical" href="https://joleneyu.github.io/i-am-jolene/side-project-3.html">
 
@@ -19,8 +19,8 @@
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
         href="https://joleneyu.github.io/i-am-jolene/feeds/all.atom.xml">
   <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
-        href="https://joleneyu.github.io/i-am-jolene/feeds/side-project.atom.xml">  
-  <meta name="description" content="Have you ever worried about the costs related to CloudFormation Stacks? I know CloudFormation is basically free, but the resources created by CloudFormation Stacks are NOT! In a commercial development environment, there could be tons of non-used stacks are up and running every day! I found an open-source project - StackJanitor …">
+        href="https://joleneyu.github.io/i-am-jolene/feeds/roast-and-rock.atom.xml">  
+  <meta name="description" content="As a DevOps newbie, I heard Jenkins even before I knew about CI/CD pipeline. In my mind, Jenkins must be a great product. It's so popular and widely used in enterprises. Most of the DevOps job vacancy in the market needs some experience of Jenkins. There must be a …">
 
 
 </head>
@@ -41,64 +41,93 @@
 
   <div class="main">
     <div class="container">
-      <h1>  Save Your AWS Costs by StackJanitor
+      <h1>  Why I Hate Jenkins and Tips If You Have to Use It!
 </h1>
       <hr>
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2021-09-11T14:04:00+10:00">
+        <li class="list-inline-item text-muted" title="2021-09-22T10:23:00+10:00">
           <i class="fas fa-clock"></i>
-          Sat 11 September 2021
+          Wed 22 September 2021
         </li>
         <li class="list-inline-item">
           <i class="fas fa-folder-open"></i>
-          <a href="https://joleneyu.github.io/i-am-jolene/category/side-project.html">side project</a>
+          <a href="https://joleneyu.github.io/i-am-jolene/category/roast-and-rock.html">roast and rock</a>
         </li>
           <li class="list-inline-item">
             <i class="fas fa-user"></i>
               <a href="https://joleneyu.github.io/i-am-jolene/author/jolene-yu.html">Jolene Yu</a>          </li>
           <li class="list-inline-item">
             <i class="fas fa-tag"></i>
-              <a href="https://joleneyu.github.io/i-am-jolene/tag/serverless.html">#serverless</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/typescript.html">#typescript</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/unit-test.html">#unit test</a>          </li>
+              <a href="https://joleneyu.github.io/i-am-jolene/tag/jenkins.html">#jenkins</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/ci.html">#CI</a>,               <a href="https://joleneyu.github.io/i-am-jolene/tag/devops.html">#DevOps</a>          </li>
       </ul>
     </header>
     <div class="content">
-      <p>Have you ever worried about the costs related to CloudFormation Stacks? I know CloudFormation is basically free, but the resources created by CloudFormation Stacks are NOT! In a commercial development environment, there could be tons of non-used stacks are up and running every day! </p>
-<p>I found an open-source project - StackJanitor which solves this problem easily. It has 2 major mechanisms. </p>
+      <p>As a DevOps newbie, I heard Jenkins even before I knew about CI/CD pipeline. In my mind, Jenkins must be a great product. It's so popular and widely used in enterprises. Most of the DevOps job vacancy in the market needs some experience of Jenkins. There must be a reason! </p>
+<p>Until recently, I finally started learning about Jenkins after I played with GitHub Action, Bitbucket Pipelines. Ten days ago, I was excited and curious about this learning journey.</p>
+<p>Now I officially state: <strong><em>I hate Jenkins!</em></strong></p>
+<h3>Jenkins master is running on my local machine!</h3>
+<p>As I know, GitHub Actions and BitBucket Pipelines are all running in a serverless way, also known as SaaS. As a user, I don't need to manage the underlying infrastructure also means whenever a pull request triggered the pipeline, they could run it 24*7 for me. </p>
+<p>For Jenkins, if you didn't deploy your Jenkins to a dedicated cloud compute or on-premise, your pipeline could face single point failure. To make it work, we need to manage the infrastructure and the operating system by ourselves. </p>
+<p>I didn't expect a popular software like Jenkins would be such old school!</p>
+<h3>Configure a Jenkins agent is pretty hard!</h3>
+<p>I next figured I should try the Jenkins distributed builds. Maybe that's the power of Jenkins! </p>
+<p>Jenkins provides three ways to connect to Agents(Slaves):</p>
 <ol>
-<li>
-<p>StackJanitor automatically adds all of the CloudFormation stacks that you create in your AWS account to a DynamoDB table. If you have specified a stacktag <em>stackjanitor</em> to <em>enabled</em>, StackJanitor will add your CloudFormation Stack to DynamoDB, setting a TTL field on it to 7 days (this is the default, but can be changed). When the DynamoDB row expires and deletes the row, a lambda function is then triggered that deletes your stack.</p>
-</li>
-<li>
-<p>StackJanitor can also delete stacks using either a Github or Bitbucket webhook. It uses merged pull request events to trigger the webhook so that they can quickly delete stacks as part of the development workflow.</p>
-</li>
+<li>Launching Agent with SSH from Master</li>
+<li>Launch Agent via Java Web Start</li>
+<li>Launch Agent via execution of command on the Master</li>
 </ol>
-<p>This open-source project had an open issue of not cleaning up stacks properly sometimes. They require someone to add a fallback mechanism that can remove stacks older than a certain date with the <em>stackjanitor:enabled</em> tag on the stack.</p>
-<p>To optimise this situation, I recently updated an additional handler to periodically scan and delete old stacks. It's currently under review but I think the outcome is quite cheering. I've learned a lot in this project which I would like to share! <a href="https://github.com/joleneyu/StackJanitor">Here is the repo for this project</a></p>
-<h3>What I've done:</h3>
-<ol>
-<li>
-<p>Everything was new to me: Serverless Framework, TypeScript, Compiling, JavaScript, Unit Testing. Even just add one single handler was a huge task for me. So I took my first step to read existing code! But TypeScpirt is an object-oriented programme language that is quite different from Python. Compare to JavaScript, most developers find TS is simpler to work with because of its features of strict data type definition and prompt error message when you are writing code. I hope these features helped me as others which didn't happen! So I took a beginner course in TypeScript.</p>
-</li>
-<li>
-<p>Finally I could write some functions with TypeScript! I started to appreciate the hints it provided and I could adjust my code while I was writing it. After I wrote the optional handler, I started to run the handler to test out with CloudFormation stacks. Everything worked fine at this stage.</p>
-</li>
-<li>
-<p>The next step was unit testing. The concept was fairly easy - you pass variables to the functions you are testing and compare with expecting results with the function results. I had a problem with the last function which performs deleting stacks. The problem is I only want to mock delete actions when I run the tests instead of deleting the real stacks. I used the mocking modular for AWS SDK which uses Sinon.JS to create robust stubs in place of the SDK calls. Unit tests end up perfect.</p>
-</li>
-<li>
-<p>Source code looks great. So I moved on to deploy the Lambda function to AWS. Here I have to modify the "serverless.yml" file to add the additional function. At first, I messed up with the event schedule as I didn't put the right syntax to Cron. (<strong><em>Learning point</em></strong> - Always read through the documentation for what you didn't know!)</p>
-</li>
-<li>
-<p>Okay, the final step would be to tidy up the code and make sure all the changes are necessary by comparing with the base code from Git history! Thank God, I did this, because I found out I accidentally delete the <em>delete function</em> in the source code!! I added the lines back but a big question mark raised up of why my unit testing didn't fail? (I did run unit tests before I did this tidy up step.) Then I went back to the test file and spent half a day figuring out the problems:</p>
-<ul>
-<li><strong><em>ForEach</em></strong> function can’t work properly with <strong><em>expect</em></strong> function</li>
-<li>Define functions with <strong><em>locally scoped variables</em></strong>. Unit tests won’t pick up globally scoped variables when you only import functions.</li>
-</ul>
-</li>
-</ol>
-<p>Then submit the pull request and all done! </p>
+<p>I followed the <a href="https://www.jenkins.io/doc/book/using/using-agents/">tutorial</a> and tried the first way - launch Agent with SSH from Master.</p>
+<p>It's supposed to be fairly easy. But I was wrong! </p>
+<p>I configured the Jenkins Master and Agent with Docker Compose, so it won't have network connection issues. Here I had a few problems: the first one was that I set up 22 port as the Master-Agent SSH connect port that is being used. The second one was the SSH key format I generated is not compatible with either Java or Jenkins. The third one was that the Agent is that accept connections. This was uncommon in my experience and it took me a while to figure out I should pass the public key environment variable to the Agent.</p>
+<p>After I configured all this, I realized that the Agent needs to stay alive all the time even I configured the Agent <strong><em>"Availability"</em></strong> to <strong><em>"Bring this Agent online when in demand, and take offline when idle"</em></strong>. </p>
+<p>When you see this, you will automatically think "Ahh, great, it can automatically bring down my Agent when it's not in use and save me some money!" </p>
+<p><img alt="image info" src="./images/Availability.png" data-action="zoom" width="90%"></p>
+<p>But it didn't happen as I expected!! </p>
+<p>What the Jenkins Master did is just killed the connection with the Agent! The Agent is still alive! (agent1)</p>
+<p><img alt="image info" src="./images/agent_offline.png" data-action="zoom" width="90%"></p>
+<p><img alt="image info" src="./images/agent_alive.png" data-action="zoom" width="90%"></p>
+<h3>Dynamic provisioning Jenkins Agents on AWS Cloud using Docker is not working!</h3>
+<p>I didn't give up yet. Is there a cloud way to scale out the Agents and bring them up whenever requires to save some cost?
+I did find a docker plugin and you can pull a docker container to a spot instance, and run your pipeline on the docker container. Once the job is finished, it will terminate itself automatically.</p>
+<p>I thought I'd better gave it a try. No luck here. It didn't only work properly but also exposed <strong><em>a big security issue</em></strong>. I will explain it later.</p>
+<p>Here is what I did to make it work. I configured a spot instance on AWS, installed docker and open a port for it to listen to commands from Master. Then I configured the Docker plugin on Master-side by adding a new cloud and a docker template. Okay, the test connection was successful. </p>
+<p><img alt="image info" src="./images/docker-cloud.png" data-action="zoom" width="90%"></p>
+<p>I manually started the build on my Master console. Guess what? It gave me a bunch of docker containers and kept going on and on. </p>
+<p><img alt="image info" src="./images/failed-nodes.png" data-action="zoom" width="90%"></p>
+<p><img alt="image info" src="./images/docker-containers.png" data-action="zoom" width="90%"></p>
+<p>I checked the log that said, "This is probably a bug in Jenkins":(</p>
+<p><img alt="image info" src="./images/jenkins-bug.png" data-action="zoom" width="90%"></p>
+<p>I've never built successfully in this way. </p>
+<p>After I manually stopped the build and terminated the instance, I tested if it could bring up another instance when a build is in the queue. It ended up waiting forever!!!</p>
+<p>Now let's talk about the security issue of this architecture. Jenkins Master needs to connect to the spot instance with its public IP address since Jenkins Master is not running in the same VPC. Once I opened a port for docker service to listen to on the Agent host. If someone hacks into the host and controls docker with the public IP address and open port, it means the hacker takes over my host as docker service runs as the root user. The hacker can do whatever he wants.</p>
+<p>So this is not a possible way to work with Jenkins properly.</p>
+<h3>Finally, something is working!</h3>
+<p>After working with the docker plugin, I have mixed feelings about plugins that Jenkins provides. On one hand, so much variety of the plugins makes me curious - is there any other plugins that could help the situation I am facing? On the other hand, I'm worried that it would end up like the docker plugin - buggy and can't go anywhere. </p>
+<p>But there must be something out there that I don't know made Jenkins popular. So I decided to try one more time!</p>
+<p>This time, I followed up an official <a href="https://aws.amazon.com/blogs/compute/cost-optimize-your-jenkins-ci-cd-pipelines-using-ec2-spot-instances/">tutorial</a> from AWS.</p>
+<p>First, I deployed the cloud infrastructure with a new VPC, an auto scaling group, a security group for the ASG, an IAM user with permission needed for Jenkins Agents. This infrastructure is provided with Terraform, feel free to use it. Repo is <a href="https://github.com/joleneyu/Jenkins_with_Spot_Instances">Here</a>.</p>
+<p>After deployed the resources on AWS, I configured a new cloud on Jenkins Master as below. </p>
+<p>Hit <strong><em>Test Connection</em></strong> before move on to the next setting to test out if Jenkins Master can talk to the ASG.</p>
+<p><img alt="image info" src="./images/fleet-1.png" data-action="zoom" width="90%"></p>
+<p>The credential used by <strong><em>Launcher</em></strong> is the key pair attached to the launch template. Make sure to set the key's username to <strong><em>ec2-user</em></strong> as the SSH key on the agent is only readable by this default user. If you are using a different image to launch spot instances, double-check which user the system is using. </p>
+<p>Since my Jenkins Master is running with a docker container on my local machine, I have to associate a public IP address to spot instances. If your Jenkins Master and Agents are in the same network, you don't need the public IP address setting in Terraform. For security concerns, tick <strong><em>Private IP</em></strong> as well.</p>
+<p><img alt="image info" src="./images/fleet-2.png" data-action="zoom" width="90%"></p>
+<p>I ticked the option <strong><em>Scale Executors by Weight</em></strong> as when I tested scale-out features, I couldn't make Master tell ASG that Jenkins needs more Agents to work without this option.</p>
+<p>Also in Terraform, make sure not override with improper <strong><em>weighted_capacity</em></strong> in the section <strong><em>mixed_instances_policy</em></strong> in asg.tf. It could cause ASG not to trigger another spot instance as it believes that enough capacity is provided.</p>
+<p>Jenkins EC2-Fleet cloud settings override ASG settings. So, the “Minimum Cluster Size” and “Maximum Cluster Size” values mentioned here override ASG’s settings dynamically.</p>
+<p>If you set <strong><em>Minimum Cluster Size</em></strong> as 0, then when there are no pending jobs there won’t be any idle servers after <strong><em>Max Idle Minutes Before Scaledown</em></strong> minutes are met. In this scenario, when there is a new build request, it takes roughly two to five minutes for new spot instances to start processing after bootstrapping and installing necessary Jenkins agents.</p>
+<p><img alt="image info" src="./images/fleet-3.png" data-action="zoom" width="90%"></p>
+<p>Here I ticked <strong><em>No Delay Provision Strategy</em></strong>, it helps Jenkins Master scale up/down immediately.</p>
+<p><img alt="image info" src="./images/fleet-4.png" data-action="zoom" width="90%"></p>
+<p>Finally, this architecture is working! You can automatically trigger new agents to start to fulfil your pipeline requirements and no need to worry about paying extra for idle agents.  You can also <strong><em>Delete Agent</em></strong> manually in the Jenkins console. Yep! </p>
+<p>Furthermore, you can migrate your Jenkins Master to EC2 Spot Instance with a fixed EFS volume to keep Jenkins persistent data on it. I will update this to my Terraform code very soon. If you are interested, check <a href="https://github.com/joleneyu/Jenkins_with_Spot_Instances">here</a>.</p>
+<p>From my ten days experience with Jenkins, I would say I don't love it! </p>
+<p>The trouble-shooting I spent on the underlying infrastructures along the way is not a pleasant journey! I could imagine making an enterprise-level Jenkins work properly needs a speciality team or a dedicated member to support. From the cost point of view, why don't choose other serverless products? I mean we have better options.</p>
+<p>Besides, I found some of the plugins are up for adoption and didn't update for a long time. Even this EC2-Fleet-Plugin is still having a bunch of bugs in its GitHub repo. I recommend if you need to use Jenkins for some reason, use the third party managed versions, like CloudBees. They are much more well maintained and you can focus on your application development.</p>
+<p>That's all for this wall of the post! I wish I did spend all this time practising my coding!!</p>
     </div>
   </article>
     </div>
